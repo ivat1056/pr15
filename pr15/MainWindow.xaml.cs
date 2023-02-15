@@ -23,6 +23,16 @@ namespace pr15
         public MainWindow()
         {
             InitializeComponent();
+            Model.tbResult = rezult;
+            maths.ItemsSource = Model.dataList;
+            maths.SelectedIndex = 0;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Model.first = tbFirst.Text;
+            Model.second = tbSecjnd.Text;
+            Model.CalculationResult = maths.SelectedIndex;
         }
     }
 }
